@@ -27,7 +27,7 @@ namespace exjobb.Services
                 { "code", code },
                 { "client_id", clientId },
                 { "client_secret", clientSecret },
-                { "redirect_uri", "http://localhost:5173" },
+                { "redirect_uri", "https://gentle-mud-05ad76603.6.azurestaticapps.net" },
                 { "grant_type", "authorization_code" }
             };
 
