@@ -195,7 +195,7 @@ namespace exjobb.Endpoints
                 }
 
             }
-            //radera cookie
+            //delete cookie
             httpContext.Response.Cookies.Append("refresh", "",
             new CookieOptions
             {

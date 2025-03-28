@@ -43,7 +43,7 @@ namespace exjobb.Services
                     var tokenResponse = JsonConvert.DeserializeObject<GoogleTokenResponse>(responseBody);
 
                     //verify Google ID-token
-                    var res = await VerifyGoogleToken(tokenResponse.IdToken);
+                    var res = await VerifyGoogleToken(tokenResponse!.IdToken);
 
                     if (!string.IsNullOrWhiteSpace(res.Name))
                     {

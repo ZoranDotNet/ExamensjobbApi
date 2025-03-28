@@ -44,10 +44,10 @@ builder.Services.AddAuthentication(options =>
     {
         ValidateIssuer = true,
         ValidateAudience = true,
-        ValidIssuer = builder.Configuration.GetValue<string>("jwtSettings:Issuer"),
-        ValidAudience = builder.Configuration.GetValue<string>("jwtSettings:Audience"),
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration.GetValue<string>("jwtSettings:Issuer"),
+        ValidAudience = builder.Configuration.GetValue<string>("jwtSettings:Audience"),
         ClockSkew = TimeSpan.Zero,
         IssuerSigningKey = new SymmetricSecurityKey(Convert.FromBase64String(builder.Configuration.GetValue<string>("jwtSettings:SigningKey:Value")!))
     };
